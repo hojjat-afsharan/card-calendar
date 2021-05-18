@@ -1,0 +1,6 @@
+<!-- <card x='30px' y='40px' height='150px' width='200px' [zIndex]="firstCardZIndex" (goUp)="ChangeZIndex($event)"></card>
+<card x='20px' y='10px' height='210px' width='45px' [zIndex]="secondCardZIndex" (goUp)="ChangeZIndex($event)"></card> -->
+
+<div *ngFor="let card of cards">
+    <card [x]='card.x' [y]='card.y' [height]='card.height' [width]='card.width' [zIndex]="card.zIndex" (goUp)="ChangeZIndex(card)"></card>
+</div>

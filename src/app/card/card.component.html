@@ -1,0 +1,17 @@
+<div
+  (mouseover)="hovered = true"
+  (mouseleave)="hovered = false"
+  class="card"
+  [ngStyle]="{
+    left: x,
+    top: y,
+    width: width,
+    height: height,
+    backgroundColor: color,
+    zIndex: hovered ? 10000 : zIndex,
+    borderStyle: hovered ? 'dashed': 'solid',
+    opacity: hovered ? 0.8:1
+  }"
+>
+  <div class="z-button" (click)="goUpOneLevel()"></div>
+</div>
